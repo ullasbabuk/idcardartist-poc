@@ -1,0 +1,11 @@
+<!--
+<div mat-dialog-title align="center">{{data.modalStudentName}}</div>
+-->
+<div mat-dialog-content>
+  <canvas #myCanvas width="600px" height="880px" ></canvas>
+</div>
+
+<div mat-dialog-actions align="center">
+  <button mat-raised-button (click)="onNoClick()">Close</button>
+  <button mat-raised-button color="accent" (click)="downloadSingle()" >Download</button>
+</div>

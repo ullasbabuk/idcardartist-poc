@@ -1,0 +1,32 @@
+<div><button (click)="backClicked()" type="button" class="btn btn-link">BACK</button></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" [class.active]="fontSettings">
+                <a class="nav-link" (click)="fontSettingsClicked()">Font Settings<span class="sr-only">(current)</span></a>
+            </li>                    
+            <li class="nav-item" [class.active]="singleEntry">
+                <a class="nav-link" (click)="singleEntryClicked()">Single Entry <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" [class.active]="multipleEntry">
+                <a class="nav-link" (click)="multipleEntryClicked()">Multiple Entry <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div *ngIf="singleEntry" >
+    <single-entry (clickEventEmitter)="showEvent($event)"></single-entry>
+</div>
+
+<div *ngIf="multipleEntry" >
+    <multiple-entry (clickEventEmitter)="showEvent($event)"></multiple-entry>
+</div>
+<!--
+<div *ngIf="fontSettings" >
+    <font-settings (clickEventEmitter)="showEvent($event)"></font-settings>
+</div>
+-->
+            
+

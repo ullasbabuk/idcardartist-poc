@@ -1,0 +1,71 @@
+<ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+  <ng-template ngbSlide *ngFor="let image of images">
+    
+    <img width="100%" [src]="image" alt="Random slide">
+
+    <div class="carousel-caption center-caption">
+        <mat-tab-group headerPosition="below">
+            <mat-tab label="ABOUT US">
+              <div style="background-color:white;color:black;border-radius: 5px;padding: 20px;text-align: start">
+                We ADs GROUP are engaged in trading of school related services like supplying ID cards and related
+                products, such as ID Card Holders, Key Chains, Custom Lanyards, Badges etc. The products that we use
+                are high quality material which is basically harmless. Our other services include photography and video
+                coverage (group photos, events coverage etc) stage decoration, light and sounds, LED walls, photo
+                printing and lamination, video editing etc. Our company specializes in offering reliable printing services
+                to the customers. Our products and services feature optimum quality, functionality and punctual
+                delivery of the final product. We perform strict quality checks and logistics are also being taken care of
+                our professional team. Our rates are highly competitive in the market.
+              </div>
+            </mat-tab>
+            <mat-tab label="PRODUCTS">
+                <div style="background-color:pink;border-radius: 5px;padding: 5px;text-align: start">
+                    ID Cards – We specialize in the field of supplying ID cards as per the requirement of the customers. We
+                    use highest quality card materials available in the market, taking into consideration that our main
+                    customers are educational institutions and thereby use harmless materials. We cater the needs of
+                    various customers by offering a wide variety of ID cards, in different sizes, shape and colours. We also
+                    use different types of lanyards (tags) as per the requirement of the customers. These are customized in
+                    different colours and patterns as per the likes of our customers. We also deal with other related
+                    materials like customised badges, key chains etc.
+                </div>                
+                <div style="margin-top:5px;background-color:yellow;color:black;border-radius: 5px;padding: 5px;text-align: start">
+                  Photography and Video Coverage – We are professionals in video coverage and photography. We cover
+                  indoor and outdoor functions, mainly focusing on wedding works, institutional functions etc using high
+                  end professional cameras and accessories to provide excellent output.
+                </div>
+                <div style="margin-top:5px;background-color:orange;border-radius: 5px;padding: 5px;text-align: start">
+                  School Photos - We undertake school photography, covering functions and taking class wise photos etc
+                  capturing the best of the school time in prints and laminated frames.
+                </div>
+                <div style="margin-top:5px;background-color:gray;border-radius: 5px;padding: 5px;text-align: start">
+                  Event Management – Our group covers all events in best quality, as per need of our customers, our key
+                  is to provide our services at reasonable rates. Team work is our speciality which helps us deliver to
+                  excellence.
+                </div>
+                <div style="margin-top:5px;background-color:green;color:black;border-radius: 5px;padding: 5px;text-align: start">
+                  Graphic Designing – Our passion in the field of designing using graphic tools motivates us to undertake
+                  any kind of designing works like logo creation, brochures, business cards etc. We specialise in designing
+                  albums and also other designing related works including animation works.
+                </div>
+                <div style="margin-top:5px;background-color:red;border-radius: 5px;padding: 5px;text-align: start">
+                  Printing and lamination – We undertake all printing and photo lamination works and delivers output on
+                  time and best quality.
+                </div>
+            </mat-tab>
+            <mat-tab label="CONTACT US">
+                <div style="background-color:yellowgreen;border-radius: 5px;padding: 5px;text-align: center; height: 200px; padding-top:3%;">
+                    ADs GROUP<br>
+                    Vattavaila<br>
+                    Thirumala PO<br>
+                    Trivandrum, Kerala – 695006<br>
+                    Contact us on 8589025951, 8589035951
+                </div>
+            </mat-tab>
+            <mat-tab label="CLIENTS">
+              <div style="background-color:yellowgreen;border-radius: 5px;padding: 5px;text-align: center;height: 200px;padding-top:8%;">
+                <button (click)="onClickMe()" class="btn btn-success">Login</button>
+              </div>
+            </mat-tab>      
+      </mat-tab-group>
+    </div>
+  </ng-template>
+</ngb-carousel>

@@ -1,0 +1,73 @@
+
+<div style="margin-top: 10px;"> </div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    FINAL CARD
+                </div>
+                <div class="card-body">
+                    <canvas #myCanvas width="600px" height="880px" ></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    IMAGES
+                </div>        
+                <div class="card-body">
+                    <div>
+                        Background Image: 
+                    <input #imageInput
+                        type="file"
+                        accept="image/*"
+                        (change)="processFile($event)">
+                    </div>
+                    <div style="margin-top: 10px;"> </div>
+                    <div>
+                        Student Photo: 
+                        <input #profileImageInput
+                            type="file"
+                            accept="image/*"
+                            (change)="processProfileImage($event)">
+                    </div>
+                </div>
+                <div class="card-header">
+                        STUDENT DATA
+                </div>
+                <div class="card-body">
+                    <input class="form-control" placeholder="Student Name" type="text" [(ngModel)]="studentName" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Class" type="text" [(ngModel)]="studentClass" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Admn No" type="text" [(ngModel)]="admissionNumber" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="DOB" type="text" [(ngModel)]="dateOfBirth" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Contact Number" type="text" [(ngModel)]="studentContactNumber" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Blood Group" type="text" [(ngModel)]="studentBloodGroup" >
+                    <div style="margin-top: 10px;"> </div>
+                </div>        
+                
+                <div class="card-body">
+                    <div class="row">
+                        <div style="margin-left: 20px;"> </div>
+                        <div align="left"><button (click)="process($event)" class="btn btn-success">Copy</button></div>
+                        <div style="margin-left: 40px;"> </div>
+                        <div align="left"><button (click)="downLoadPDF($event)" class="btn btn-primary">Download</button></div>
+                        <div style="margin-left: 40px;"> </div>
+                        <div align="left"><button (click)="clearCanvas($event)" class="btn btn-secondary">Clear</button></div>        
+                    </div>        
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.mat-tab-label {
+    width: 100px;
+    padding: 5px;
+    margin: 20px;
+    background-color: rgb(28, 14, 48);
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    width: 100px;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: red;
+    font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: green;
+}
+
+.center-caption {
+    position: absolute;
+    float: left;
+    z-index: 10;
+}

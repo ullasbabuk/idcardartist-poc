@@ -1,0 +1,81 @@
+
+<div style="margin-top: 10px;"> </div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            FILES
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                        Background Image: 
+                        <input #imageInput1
+                            type="file"
+                            accept="image/*"
+                            (change)="uploadBackgroundImage($event)" >
+                </div>
+                <div class="col-3">
+                        Students Data(CSV file): 
+                        <input #imageInput2
+                            type="file"
+                            accept=".csv"
+                            (change)="uploadStudentsData($event)" [disabled]="!backgroundImageUploaded">        
+                </div>
+                <div class="col-3">
+                        Students Images: 
+                        <input #imageInput3
+                            type="file"
+                            multiple
+                            accept="image/*"
+                            (change)="uploadStudentsImages($event)" [disabled]="!studentsDataUploaded">
+                </div>
+                <div class="col-3">
+                    <div style="margin-top: 10px;"> </div>
+                    <div align="left"><button (click)="downloadAll()" class="btn btn-success">Download All</button></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-3 " *ngFor="let student of studentList; let i = index;">
+            <div style="margin-top: 10px;"> </div>
+            <div class="card">
+                <div class="card-header card-title">
+                    {{student.name}} - {{student.photo}}
+                </div>
+                <mat-card>
+                <div class="card-body">
+                    <div align="center" class="small-font">
+                        <img [src]="student.profileURL" width="80" height="100"/>
+                        <div>
+                            <br/>
+                            Admission No: {{student.admissionNumber}}<br/>
+                            Class: {{student.class}}<br/>
+                            DOB: {{student.dob}}<br/>
+                            Contact: {{student.contact}}<br/>
+                            Blood: {{student.bloodGroup}}<br/>
+                            Photo File Name: {{student.imageFileName}}<br/>
+                        </div>
+                        <div style="margin-top: 10px;"> </div>
+                        <div class="row">
+                            <div class="col ">
+                                <button (click)="openModal(student, false)" class="btn btn-sm btn-primary">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+ 
